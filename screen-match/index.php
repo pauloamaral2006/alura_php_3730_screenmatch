@@ -1,17 +1,17 @@
 <?php
 
-require __DIR__ . "/src/Modelo/Avaliavel.php";
-require __DIR__ . "/src/Modelo/Genero.php";
-require __DIR__ . "/src/Modelo/Titulo.php";
-require __DIR__ . "/src/Modelo/Serie.php";
-require __DIR__ . "/src/Modelo/Episodio.php";
-require __DIR__ . "/src/Modelo/Filme.php";
-require __DIR__ . "/src/Calculos/CalculadoraDeMaratona.php";
-require __DIR__ . "/src/Calculos/ConversorNotaEstrela.php";
+require 'autoload.php';
+
+use ScreenMatch\Calculos\{
+    CalculadoraDeMaratona, ConversorNotaEstrela
+};
+use ScreenMatch\Modelo\{
+    Genero, Filme, Serie, Episodio
+};
 
 echo "Bem-vindo(a) ao ScreenMatch\n";
 
-$filme = new Filme(
+$filme = new Filme (
     'Thor - Ragnarok',
     2021,
     Genero::SuperHeroi,
