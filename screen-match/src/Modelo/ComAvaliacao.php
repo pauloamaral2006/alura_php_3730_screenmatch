@@ -5,9 +5,8 @@ namespace ScreenMatch\Modelo;
 trait ComAvaliacao 
 {
     
-    private array $notas;
-
-    
+    private array $notas = [];
+   
 
     public function avalia(float $nota): void
     {
